@@ -1,0 +1,283 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <div class="container">
+    <div class="welcome">
+      <div class="pinkbox">
+        <div class="signup nodisplay">
+          <div class="durka">
+            <h1>register</h1>
+            <form autocomplete="off">
+              <input type="text" placeholder="name">
+              <input type="text" placeholder="surname">
+              <input type="tel" placeholder="telefon">
+              <input type="password" placeholder="password">
+              <button class="button submit">create account </button>
+            </form>
+          </div>
+        </div>
+        <div class="signin">
+          <h1>sign in</h1>
+          <form class="more-padding" autocomplete="off">
+            <input type="tel" placeholder="telefon">
+            <input type="password" placeholder="password">
+            <div class="checkbox">
+              <input type="checkbox" id="remember" /><label for="remember">Remember me</label>
+            </div>
+
+            <button class="button submit">login</button>
+          </form>
+        </div>
+      </div>
+      <div class="leftbox">
+        <h2 class="title">ЛИЧНЫЙ КАБИНЕТ</h2>
+        <p class="account">Уже есть аккаунь?</p>
+        <button class="button" id="signin">login</button>
+      </div>
+      <div class="rightbox">
+        <h2 class="title">ЛИЧНЫЙ КАБИНЕT</h2>
+        <p class="desc"> Все еще нет личного кабинета на</p>
+        <p class="desc"> <span>ИнтеграторМобайл</span></p>
+        <img class="flower" src="https://psv4.userapi.com/c856328/u517838150/docs/d5/850615264150/bynthhh.jpg?extra=FwMEKbzP5rXHlv-YC32lYehccoYrTayFi-MGFQY5tw5NFB0PJD1IVoIEJGlza4cqQTkI1GRfFwTo1FsSG-tL3EFwr1B0O4loCMY3bsIuSzYElKynEkcwSDnLp_2u9cXY0URL0jrHpfxv0IwcH-7bzFVs"/>
+        <p class="account">Зарегистрируйтесь!</p>
+        <button class="button" id="signup">sign up</button>
+      </div>
+    </div>
+  </div>
+</head>
+<style>
+  body {
+    background: #01008e;
+  }
+
+  /* div box styling */
+  .container {
+    margin: auto;
+    top: 10%;
+    width: 500px;
+    height: 550px;
+    position: relative;
+  }
+
+  .welcome {
+    background: #f6f6f6;
+    width: 700px;
+    height: 406px;
+    position: absolute;
+    top: 30%;
+    left: -15%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .pinkbox {
+    position: absolute;
+    top: -10%;
+    left: 4%;
+    background: #ff0178;
+    width: 270px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all .5s ease-in-out;
+    z-index: 2;
+  }
+  .durka{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+  }
+  .nodisplay {
+    display: none;
+    transition: all .5s ease;
+  }
+
+  .leftbox, .rightbox {
+    position: absolute;
+    width: 50%;
+    transition: 1s all ease;
+  }
+
+  .leftbox {
+    left: -2%;
+  }
+
+  .rightbox {
+    right: -2%;
+  }
+
+  /* font & button styling */
+  h1 {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: #f6f6f6;
+    opacity: .5;
+    font-size: 1.2em;
+    letter-spacing: 8px;
+  }
+
+  .title {
+    font-family: "Lora", serif;
+    color: #ff0178;
+    font-size: 1.3em;
+    line-height: .9em;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 15%;
+  }
+
+  .desc {
+    margin-top: -8px;
+    font-size: 0.7em;
+
+  }
+
+  .account {
+    margin-top: 45%;
+    font-size: 10px;
+  }
+
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-size: .4em;
+    letter-spacing: 2px;
+    color: #8E9AAF;
+    text-align: center;
+  }
+
+  span {
+    color: #01008e;
+  }
+
+  .flower {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    top: 42%;
+    left: 28%;
+    opacity: .7;
+  }
+
+
+  button {
+    padding: 11px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 9px;
+    border-radius: 10px;
+    margin: auto;
+    outline: none;
+    display: block;
+  }
+  button:hover {
+    background: #EAC7CC;
+    color: #f6f6f6;
+    transition: background-color 1s ease-out;
+  }
+
+  .button {
+    margin-top: 1%;
+    background: #f6f6f6;
+    color: #dca2aa;
+    border: solid 1px #EAC7CC;
+  }
+
+  /* form styling */
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 7px;
+  }
+
+  .more-padding {
+    padding-top: 120px;
+  }
+  .more-padding input {
+    padding: 8px;
+  }
+  .more-padding .submit {
+    margin-top: 20px;
+  }
+
+  .submit {
+    margin-top: 15px;
+    padding: 10px;
+    border-color: #e7c0c5;
+  }
+  .submit:hover {
+    background: #CBC0D3;
+    border-color: #c6bacf;
+  }
+
+  input {
+    background: #EAC7CC;
+    width: 65%;
+    color: #d58f99;
+    border: none;
+    border-bottom: 1px solid rgba(246, 246, 246, 0.5);
+    padding: 5px;
+    margin: 7px;
+  }
+  input::placeholder {
+    color: rgba(246, 246, 246, 0.5);
+  }
+  input:focus {
+    color: #d58f99;
+    outline: none;
+    border-bottom: 1.2px solid rgba(213, 143, 153, 0.7);
+    transition: .8s all ease;
+  }
+  input:focus::placeholder {
+    opacity: 0;
+  }
+
+  label {
+    font-family: "Open Sans", sans-serif;
+    color: #ffffff;
+    font-size: 0.9em;
+    letter-spacing: 0.3px;
+  }
+
+  .checkbox {
+    display: inline;
+    white-space: nowrap;
+    position: relative;
+    left: -60px;
+  }
+
+
+
+  .checkbox input[type="checkbox"]:checked + label {
+    color: #d48c96;
+    transition: .5s all ease;
+  }
+
+</style>
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+<script>
+
+</script>
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+</body>
+
+</html>
