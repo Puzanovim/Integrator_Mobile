@@ -32,6 +32,7 @@
       </div>
       <div class="leftbox">
         <h2 class="title">ЛИЧНЫЙ КАБИНЕТ</h2>
+        <img class="cartina" src="https://psv4.userapi.com/c856424/u517838150/docs/d11/81719d569e3a/Integrator.png?extra=Q9eQNaHqgSs6nHVpxIF5RTwfhikhnu3mgURDR4MDb1zqVVbl5PjBoancsS-ju6huxq4m7Bvuv9_3Mr2KYYV9Hqfe1Q-vTTQdYo0O_DHbFGNKVmiuiQyyvfta32m5nbPIZm64dHQYywjQbxl1cPah6ZKR"/>
         <p class="account">Уже есть аккаунь?</p>
         <button class="button" id="signin">login</button>
       </div>
@@ -39,7 +40,7 @@
         <h2 class="title">ЛИЧНЫЙ КАБИНЕT</h2>
         <p class="desc"> Все еще нет личного кабинета на</p>
         <p class="desc"> <span>ИнтеграторМобайл</span></p>
-        <img class="flower" src="https://psv4.userapi.com/c856328/u517838150/docs/d5/850615264150/bynthhh.jpg?extra=FwMEKbzP5rXHlv-YC32lYehccoYrTayFi-MGFQY5tw5NFB0PJD1IVoIEJGlza4cqQTkI1GRfFwTo1FsSG-tL3EFwr1B0O4loCMY3bsIuSzYElKynEkcwSDnLp_2u9cXY0URL0jrHpfxv0IwcH-7bzFVs"/>
+        <img class="flower" src="https://psv4.userapi.com/c856424/u517838150/docs/d11/81719d569e3a/Integrator.png?extra=Q9eQNaHqgSs6nHVpxIF5RTwfhikhnu3mgURDR4MDb1zqVVbl5PjBoancsS-ju6huxq4m7Bvuv9_3Mr2KYYV9Hqfe1Q-vTTQdYo0O_DHbFGNKVmiuiQyyvfta32m5nbPIZm64dHQYywjQbxl1cPah6ZKR"/>
         <p class="account">Зарегистрируйтесь!</p>
         <button class="button" id="signup">sign up</button>
       </div>
@@ -83,6 +84,14 @@
     transition: all .5s ease-in-out;
     z-index: 2;
   }
+  .cartina {
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    top: 32%;
+    left: 21%;
+    opacity: .7;
+  }
   .durka{
     position: absolute;
     top: 15%;
@@ -101,6 +110,7 @@
 
   .leftbox {
     left: -2%;
+
   }
 
   .rightbox {
@@ -137,7 +147,7 @@
   }
 
   .account {
-    margin-top: 45%;
+    margin-top: 57%;
     font-size: 10px;
   }
 
@@ -155,10 +165,10 @@
 
   .flower {
     position: absolute;
-    width: 150px;
-    height: 100px;
-    top: 42%;
-    left: 28%;
+    width: 250px;
+    height: 170px;
+    top: 32%;
+    left: 13%;
     opacity: .7;
   }
 
@@ -272,7 +282,17 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 <script>
+    $('#signup').click(function() {
+        $('.pinkbox').css('transform', 'translateX(140%)');
+        $('.signin').addClass('nodisplay');
+        $('.signup').removeClass('nodisplay');
+    });
 
+    $('#signin').click(function() {
+        $('.pinkbox').css('transform', 'translateX(0%)');
+        $('.signup').addClass('nodisplay');
+        $('.signin').removeClass('nodisplay');
+    });
 </script>
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
